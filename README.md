@@ -45,7 +45,7 @@ By following this guide, you'll set up:
 Clone the Repository 💻
   ```bash
   git clone https://github.com/ahmedtobar11/MongoDB-and-Mongo-Express-on-Minikube.git
-  cd <repository-directory>
+  cd MongoDB-and-Mongo-Express-on-Minikube
 ```
 
 ## Configure Kubernetes Resources
