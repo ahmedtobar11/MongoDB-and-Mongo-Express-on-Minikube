@@ -44,7 +44,7 @@ By following this guide, you'll set up:
 
 Clone the Repository 💻
   ```bash
-  git clone <repository-url>
+  git clone https://github.com/ahmedtobar11/MongoDB-and-Mongo-Express-on-Minikube.git
   cd <repository-directory>
 ```
 
@@ -56,10 +56,8 @@ kubectl apply -f mongodb-pv.yaml
 kubectl apply -f mongodb-pvc.yaml
 kubectl apply -f mongo-secrets.yaml
 kubectl apply -f mongo-config.yaml
-kubectl apply -f mongodb-deployment.yaml
-kubectl apply -f mongodb-service.yaml
-kubectl apply -f mongo-express-deployment.yaml
-kubectl apply -f mongo-express-service.yaml
+kubectl apply -f mongodb.yaml
+kubectl apply -f mongo-express.yaml
 kubectl apply -f mongo-express-ingress.yaml
 ```
 **Update /etc/hosts 📝**
@@ -75,14 +73,12 @@ http://mongo-express.local
   ```
 ## Project Structure
 
-**mongodb-pv.yaml:** Defines the Persistent Volume for MongoDB data. 📁
-**mongodb-pvc.yaml:** Defines the Persistent Volume Claim. 📦
-**mongo-secrets.yaml:** Stores MongoDB credentials securely. 🔐
-**mongo-config.yaml:** Configures MongoDB connection settings. ⚙️
-**mongodb-deployment.yaml:** Deploys MongoDB in Kubernetes. 🛠️
-**mongodb-service.yaml:** Exposes MongoDB internally within the cluster. 🌟
-**mongo-express-deployment.yaml:** Deploys Mongo Express in Kubernetes. 🖥️
-**mongo-express-service.yaml:** Exposes Mongo Express externally. 🌐
-**mongo-express-ingress.yaml:** Configures Ingress for domain access. 🚪
+- **mongodb-pv.yaml:** Defines the Persistent Volume for MongoDB data. 📁
+- **mongodb-pvc.yaml:** Defines the Persistent Volume Claim. 📦
+- **mongo-secrets.yaml:** Stores MongoDB credentials securely. 🔐
+- **mongo-config.yaml:** Configures MongoDB connection settings. ⚙️
+- **mongodb.yaml:** Deploys MongoDB in Kubernetes and Exposes MongoDB internally within the cluster . 🛠️
+- **mongo-express.yaml:** Deploys Mongo Express in Kubernetes and Exposes Mongo Express externally. 🌐
+- **mongo-express-ingress.yaml:** Configures Ingress for domain access. 🚪
 
 ![Architecture](https://github.com/user-attachments/assets/3a2b133b-8e0d-4974-a206-06efbcdfd931)
