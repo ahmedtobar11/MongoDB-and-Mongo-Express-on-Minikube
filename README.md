@@ -56,8 +56,8 @@ kubectl apply -f mongodb-pv.yaml
 kubectl apply -f mongodb-pvc.yaml
 kubectl apply -f mongo-secrets.yaml
 kubectl apply -f mongo-config.yaml
-kubectl apply -f mongodb.yaml
-kubectl apply -f mongo-express.yaml
+kubectl apply -f mongodb-deployment-service.yaml
+kubectl apply -f mongo-express-deployment-service.yaml
 kubectl apply -f mongo-express-ingress.yaml
 ```
 **Update /etc/hosts 📝**
@@ -77,8 +77,8 @@ http://mongo-express.local
 - **mongodb-pvc.yaml:** Defines the Persistent Volume Claim. 📦
 - **mongo-secrets.yaml:** Stores MongoDB credentials securely. 🔐
 - **mongo-config.yaml:** Configures MongoDB connection settings. ⚙️
-- **mongodb.yaml:** Deploys MongoDB in Kubernetes and Exposes MongoDB internally within the cluster . 🛠️
-- **mongo-express.yaml:** Deploys Mongo Express in Kubernetes and Exposes Mongo Express externally. 🌐
+- **mongodb-deployment-service.yaml:** Deploys MongoDB in Kubernetes and Exposes MongoDB internally within the cluster . 🛠️
+- **mongo-express-deployment-service.yaml:** Deploys Mongo Express in Kubernetes and Exposes Mongo Express externally. 🌐
 - **mongo-express-ingress.yaml:** Configures Ingress for domain access. 🚪
 
 ![Architecture](https://github.com/user-attachments/assets/3a2b133b-8e0d-4974-a206-06efbcdfd931)
